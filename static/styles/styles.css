@@ -1,0 +1,122 @@
+body{
+    background-color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+header{
+    background: linear-gradient(to left, #ff6600 0%, #787878 70%);
+    width: auto;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    text-justify: auto;
+}
+
+.factsframe{
+    padding: 6px;
+    width: auto;
+    background: #cc0000;
+    color:white;
+}
+
+.inputframe{
+    float: left;
+    width: 50%;
+    background: #d8d8d8;
+    height: 430px;
+}
+
+.element{
+    padding-left: 15%;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.element h4{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imageinput{
+    padding-left: 15%;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 0;
+    border-radius: 5px;
+    background: linear-gradient(to right, #1757b2 0%, #ff1c1c 100%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.button:hover{
+    background: linear-gradient(to left, #1757b2 0%, #ff1c1c 100%);
+}
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+}
+
+.image{
+    padding-left: 15%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    border: 0;
+}
+
+.submit{
+    padding-left: 15%;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 0;
+    border-radius: 50px;
+    background: linear-gradient(to right, #1757b2 0%, #ff1c1c 100%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="submit"]:hover{
+    background: linear-gradient(to left, #1757b2 0%, #ff1c1c 100%);
+}
+
+input[type="button"] {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 0;
+    border-radius: 50px;
+    background: linear-gradient(to right, #1757b2 0%, #ff1c1c 100%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="button"]:hover{
+    background: linear-gradient(to left, #1757b2 0%, #ff1c1c 100%);
+}
+
+.outputframe{
+    float: right;
+    width: 50%;
+    height: 430px;
+    background: #e8e8e8;
+    text-align: center;
+}
+
+footer{
+    background: #202020;
+    width: auto;
+    position: fixed;bottom:0;left:0;right:0;
+    text-align: center;
+    color: #fff;
+}

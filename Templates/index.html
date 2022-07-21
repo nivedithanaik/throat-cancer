@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Detection</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles/styles.css' %}">
+    <script>
+        var loadFile = function(event) 
+        {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>THROAT CANCER DETECTION SYSTEM</h1>
+    </header>
+    <div class="factsframe">
+        <marquee direction="right">
+            ***FACT 1 PERTAINING TO CANCER***
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            ***FACT 2 PERTAINING TO CANCER***
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            ***FACT 3 PERTAINING TO CANCER***
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            ***FACT 4 PERTAINING TO CANCER***
+        </marquee>
+    </div>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class="inputframe">
+                <div class="element">
+                    <h4>Insert image to be tested</h4>
+                </div>
+                <div class="imageinput">
+                    <label class="button" for="upload">Upload File</label>
+                    <input type="file"  accept="image/*" id="upload" name="upload" onchange="loadFile(event)" download>
+                </div>
+                <div class="image">
+                    <img id="output" name="output" width="400px" height="260px" alt="">
+                </div>
+                <div class="submit">
+                    <input type="submit" id="run" name="run" value="Run">
+                </div>
+            </div>
+    </form>
+    <div class="outputframe">
+        <p>OUTPUT FRAME</p>
+        <center>
+            <div>
+            {% for message in messages %}
+            <br><br><h3 style="color: #000; font-style: italic; font-family: 'Times New Roman'; font-weight: 500;">{{message}}</h3><br>
+            {% endfor %}
+            </div>
+        </center>
+    </div>
+    <footer>
+        <h3>POWERED BY XYZ</h3>
+    </footer>
+</body>
+</html>
